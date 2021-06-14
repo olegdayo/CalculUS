@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1623691204 "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.pdf" "TheoryCalculus" 1623691237
-  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.aux" 1623691205 786 bf97207e4f5336e5b866c6b90417ee42 ""
-  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" 1623691203 10549 9c9f7aa37b66081fac0c2b64fb949ac2 ""
+["pdflatex"] 1623695636 "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.pdf" "TheoryCalculus" 1623695638
+  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.aux" 1623695637 786 bf97207e4f5336e5b866c6b90417ee42 ""
+  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" 1623695636 12833 467b280b215063ebdeab0f5b0a0a238e ""
   "/Users/olegsidorenkov/Library/texlive/2021/texmf-var/fonts/tfm/lh/lh-t2a/labx1095.tfm" 1621796476 3336 216c27338cb0f11f0d2908d69ce3de23 ""
   "/Users/olegsidorenkov/Library/texlive/2021/texmf-var/fonts/tfm/lh/lh-t2a/larm0600.tfm" 1621796487 3248 7c0b9d76a2cd84ed06764a4c6eea5de4 ""
   "/Users/olegsidorenkov/Library/texlive/2021/texmf-var/fonts/tfm/lh/lh-t2a/larm0800.tfm" 1621796482 3240 04766e423166ba63b7fbbf132b8618cb ""
@@ -121,13 +121,13 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1617936458 2724738 5fc49e16473d0946998af59f675628a4 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "TheoryCalculus.aux" 1623691205 786 bf97207e4f5336e5b866c6b90417ee42 "pdflatex"
-  "TheoryCalculus.out" 1623691204 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "TheoryCalculus.tex" 1623691203 10549 9c9f7aa37b66081fac0c2b64fb949ac2 ""
+  "TheoryCalculus.aux" 1623695637 786 bf97207e4f5336e5b866c6b90417ee42 "pdflatex"
+  "TheoryCalculus.out" 1623695637 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "TheoryCalculus.tex" 1623695636 12833 467b280b215063ebdeab0f5b0a0a238e ""
   (generated)
-  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.log"
-  "TheoryCalculus.log"
   "TheoryCalculus.out"
-  "TheoryCalculus.aux"
   "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.pdf"
+  "TheoryCalculus.log"
+  "TheoryCalculus.aux"
   "TheoryCalculus.pdf"
+  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.log"
