@@ -5,21 +5,126 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{mathtools}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\newcommand{\proof}{$\square$ }
+\newcommand{\qed}{\hfill$\blacksquare$}
+
+\newcommand{\R}{\mathbb{R}}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textsf{by ОлегUS and ИванUS}}
 
 \begin{document}
 
 \begin{center}
 
 \begin{huge}
-\textsf{Математический Анализ\\Теория для экзамена 4 модуля\\1 курс}
+\textsf{Математический анализ\\1 курс}
 \end{huge}
 
 \vspace{5mm}
 
+\begin{LARGE}
+\textsf{\textbf{Теория для экзамена 4 модуля}}
+\end{LARGE}
+
 \end{center}
+
+\textbf{1. Доказать теорему Ньютона--Лейбница. Вывести формулу Ньютона--Лейбница.\\}
+\textit{Теорема Ньютона--Лейбница.} Пусть $f$ непрерывна в $(\alpha, \beta)$, $a \in (\alpha, \beta)$, $F(x) = \int_a^x f(t) dt$ -- первообразная для $f(x)$. Тогда $\forall x \in (\alpha, \beta): F'(x) = f(x)$.\\
+\proof \begin{flalign*}
+F'(x) & = \frac{F(x + \Delta x) - F(x)}{\Delta x} &&\\
+& = \frac{1}{\Delta x} \cdot \left( \int_a^{x + \Delta x} f(t)dt - \int_a^x f(t)dt \right) &&\\
+& = \frac{1}{\Delta x} \cdot \left( \int_a^x f(t)dt + \int_x^{x + \Delta x} f(t)dt - \int_a^{x} f(t)dt \right)&&\\
+& = \frac{1}{\Delta x} \cdot \int_x^{x + \Delta x} f(t)dt &&\\
+& f \text{ непрерывна, а значит, по теореме о среднем, } \int_x^{x + \Delta x} f(t)dt = \Delta x \cdot f(x^*), &&\\
+& \text{ где } x^* \text{ лежит между } x \text{ и } x + \Delta x &&\\
+& = \frac{1}{\Delta x} \cdot \Delta x \cdot f(x^*) &&\\
+& = f(x^*) \xrightarrow[\Delta x \to 0]{} f(x) &&
+\end{flalign*}
+$F'(x) = f(x)$\qed
+\\\\
+\textit{Формула Ньютона--Лейбница.} Пусть $f$ -- непрерывная на $(\alpha, \beta)$, $a, b \in (\alpha, \beta)$, а $\Phi(x)$ -- некоторая первообразная для $f$. Тогда: $$\int_a^b f(x)dx = \Phi(b) - \Phi(a).$$
+\proof $\exists C \in \R : \Phi (x) = F(x) + C = \int_a^x f(t)dt + C$\\
+$\Phi(a) = \int_a^a f(t)dt + C = 0 + C = C$\\
+$\Phi(b) = \int_a^b f(t)dt + C$\\
+$\Phi(b) - \Phi(a) = \int_a^b f(t)dt + C - C = \int_a^b f(t)dt$. \qed
+
+\textbf{2. Вывести формулу Тейлора с остаточным членом в интегральной форме.\\}
+
+\textbf{3. Доказать признак сравнения для несобственных интегралов в предельной форме.\\}
+Пусть $x \in [a, b)$, $f(x) > 0$, $g(x) > 0$. Тогда если $f(x) \sim g(x)$ при $x \rightarrow b$, то $I_1 = \int_a^b f(x)dx$ и $I_2 = \int_a^b g(x)dx$ сходятся или расходятся одновременно.\\
+\proof По условию эквивалентности: $\lim_{x \to b} \frac{f(x)}{g(x)} = 1$.\\
+Рассмотрим $\varepsilon = \frac{1}{2}$. Для него $\exists \delta > a : \forall x : \delta < x < b \Rightarrow \left| \frac{f(x)}{g(x)} - 1 \right| < \frac{1}{2}$\\
+$\frac{1}{2} < \frac{f(x)}{g(x)} < \frac{3}{2}$\\
+$\frac{1}{2} g(x) < f(x) < \frac{3}{2} g(x)$\\
+Если $I_2 = \int_a^b g(x)dx$ сходится, то $\int_\delta^b f(x)dx$ сходится.\\
+Если $I_2$ расходится, то $\int_\delta^b \frac{1}{2} g(x)dx$ расходится $\Rightarrow$ $\int_\delta^b f(x)dx$ расходится $\Rightarrow$ $\int_a^b f(x)dx$ расходится.\qed
+
+\textbf{4. Доказать интегральный признак сходимости числового ряда.\\}
+
+\textbf{5. Доказать признак д’Аламбера в предельной форме.\\}
+Пусть $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = q$. Тогда:\\
+$\bullet$ если $q < 1$, то ряд сходится;\\
+$\bullet$ если $q > 1$, то ряд расходится;\\
+$\bullet$ если $q = 1$, то имеет место неопределённость.\\
+\proof 1) $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = q < 1$\\
+Тогда $\exists N : \forall n \geq N \Rightarrow \frac{a_{n+1}}{a_n} < \frac{q+1}{2} < 1 \Rightarrow$ ряд сходится.\\
+2) $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = q > 1$\\
+Тогда $\exists N : \forall n \geq N \Rightarrow \frac{a_{n+1}}{a_n} > \frac{q+1}{2} > 1 \Rightarrow$ ряд расходится.\\
+3) а) Гармонический ряд $a_n = \frac{1}{n}$; $\frac{a_{n+1}}{a_n} = \frac{\frac{1}{n+1}}{\frac{1}{n}} \xrightarrow[n \to \infty]{} 1$. Ряд расходится.\\
+б) $a_n = \frac{1}{n^2}$; $\frac{a_{n+1}}{a_n} = \frac{\frac{1}{(n+1)^2}}{\frac{1}{n^2}} \xrightarrow[n \to \infty]{} 1$. Ряд сходится.\qed
+
+\textbf{6. Доказать сходимость абсолютно сходящегося ряда.\\}
+
+\textbf{7. Доказать теорему о почленном интегрировании и дифференцировании функционального ряда.\\}
+\textit{Теорема о почленном интегрировании функционального ряда.} Если функциональный ряд $\sum_{n=1}^{\infty} u_n (x)$ равномерно сходится в $\Delta$, и притом все $u_n (x)$ непрерывны в $\Delta$, то $$\forall [a, b] \subset \Delta : \int_a^b \left( \sum_{n=1}^{\infty} u_n (x) \right) dx = \sum_{n=1}^{\infty} \int_a^b u_n (x) dx.$$\\
+\proof $s(x) = \sum_{n=1}^{\infty} u_n (x)$ непрерывна в $\Delta$ $\Rightarrow$ $s(x) \in \mathcal{R}\left( [a, b] \right)$, $[a, b] \subset \Delta$.
+\begin{flalign*}
+\int_a^b s(x)dx & = \int_a^b \left( s_n (x) + r_n (x) \right) dx &&\\
+& = \int_a^b s_n (x) dx + \int_a^b r_n (x) dx &&\\
+& = \sum_{k=1}^{n} \int_a^b u_k (x) dx + \int_a^b r_n (x) dx
+\end{flalign*}
+\begin{flalign*}
+& \left| \int_a^b r_n (x) dx \right| \leq \left| \int_a^b \left| r_n (x) \right| dx \right| \leq \left| b - a \right| \cdot \max_{[a, b]} \left| r_n (x) \right| \xrightarrow[n \to \infty]{} 0 \text{ (по равномерной сходимости)} &&\\
+& \left( \sum_{k=1}^n \int_a^b u_n (x) dx + \int_a^b r_n (x) dx \right) \xrightarrow[n \to \infty]{} \sum_{k=1}^n \int_a^b u_k (x) dx.&&\hfill\blacksquare
+\end{flalign*}
+\\
+\textit{Теорема о почленном дифференцировании функционального ряда.} Если $\sum_{n=1}^{\infty} u_n (x)$, $x \in \Delta$ -- интервал, и притом:\\
+1) $u_n (x), u_n' (x)$ непрерывны в $\Delta$;\\
+2) ряд $\sum_{n=1}^{\infty} u_n' (x)$ равномерно сходится в $\Delta$;\\
+3) $\exists a \in \Delta : \sum_{n=1}^{\infty} u_n (a)$ сходится,\\
+то: $$\left( \sum_{n=1}^{\infty} u_n (x) \right)' = \sum_{n=1}^{\infty} u_n' (x).$$
+\proof $s(x) = u_1' (x) + u_2' (x) + \hdots$ -- непрерывная в $\Delta$ функция.\\
+Выясним, сходится ли $S(x) = u_1 (x) + u_2 (x) + \hdots$.\\
+\begin{flalign*}
+\int_a^x s(t)dt & = \int_a^x \left( \sum_{n=1}^{\infty} u_n' (t) \right) dt &&\\
+& = \sum_{n=1}^{\infty} \int_a^x u_n' (t) dt &&\\
+& = \underbrace{\sum_{n=1}^{\infty} \left( u_n (x) - u_n (a) \right)}_{(1)} \text{ (по Ньютону--Лейбницу)} &&\\
+& = \underbrace{\sum_{n=1}^{\infty} u_n (x)}_{(2)} - \underbrace{\sum_{n=1}^{\infty} u_n (a)}_{(3)} &&
+\end{flalign*}
+(1), (3) сходятся по условию $\Rightarrow$ (2) сходится.\\
+Таким образом, $\int_a^x s(t)dt = S(x) - S(a) \xRightarrow[]{\text{Ньютона--Лейбница}} S'(x) = s(x)$.\qed
+
+\textbf{8. Доказать лемму Абеля.\\}
+
+\textbf{9. Доказать достаточное условие представимости функции рядом Тейлора.\\}
+Если $f(x)$ имеет в $O_h (a)$ ($h > 0$) производные всех порядков, которые ограничены в совокупности ($\exists M > 0 : \left| f^{(n)} (x) \right| \leq M, \forall x \in O_h (a), n = 0, 1, \hdots$), то $\forall x \in O_h (a) : f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)} (a)}{n!} (x - a)^n$ -- ряд Тейлора функции $f(x)$ с центром в $x = a$.\\
+\proof $\forall n \forall x \in O_h (a) : f(x) = \sum_{n=0}^N \frac{f^{(n)} (a)}{n!} (x - a)^n + \frac{f^{(N+1)} (\xi)}{(N+1)!} (x - a)^{N+1}$ ($\xi$ лежит между $a$ и $x$).\\
+\begin{flalign*}
+& \left| \frac{f^{(N+1)} (\xi)}{(N+1)!} (x - a)^{N+1} \right| \leq M \cdot \frac{\left| x - a \right|^{N+1}}{(N+1)!} \xrightarrow[N \to \infty]{} 0 \quad (x \in O_h (a) \text{ фиксирован}) &&\\
+& f(x) = \sum_{n=0}^N \frac{f^{(n)} (a)}{n!} (x - a)^n + \frac{f^{(N+1)} (\xi)}{(N+1)!} (x - a)^{N+1} \xrightarrow[N \to \infty]{} \sum_{n=0}^{\infty} \frac{f^{(n)} (a)}{n!} (x - a)^n \quad (\forall x \in O_h (a)) &&\blacksquare
+\end{flalign*}
+
+\textbf{10. Доказать теорему о необходимом условии условного экстремума.\\}
+
+\textbf{11. Доказать теорему о достаточном условии экстремума.\\}
 
 \end{document}
