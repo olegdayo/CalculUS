@@ -70,16 +70,22 @@ $\Phi(b) - \Phi(a) = \int_a^b f(t)dt + C - C = \int_a^b f(t)dt$. \qed
 \textbf{2. Вывести формулу Тейлора с остаточным членом в интегральной форме.\\}
 \proof
 $f(x)=f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \dots + \frac{f^{(n)}(a)}{n!} + \frac{1}{n!}\int_a^x{f^{(n+1)}(t)(x-t)^ndt}$
-\\
 По формуле Ньютона-Лейбница, интегрируя по частям $n$ раз, получим:
-\\
-$f(x) - f(a) = \int_a^x{f'(t)dt} = -\int_a^x{f'(t)d(x - t)} = -f'(t)(x - t)\Big|_a^x + \int_a^x{(x - t)f''(t)dt} = f'(a)(x - a) -
-\\
-- \int_a^x{f''(t)d\frac{(x - t)^2}{2}} = f'(a)(x - a) + f''(t)\frac{(x - t)^2}{2}\big|_a^x + \int_a^x{\frac{(x - t)^2}{2}df''(t)} = f'(a)(x - a) + f''(a)\frac{(x - a)^2}{2} +
-\\
-+ \int_a^x{\frac{(x - t)^2}{2}f''(t)dt} = f'(a)(x - a) + f''(a)\frac{(x - a)^2}{2} + f'''(a)\frac{(x - a)^3}{2 \cdot 3} + \int_a^x{f'''(t)\frac{(x - t)^3}{2 \cdot 3}dt} =
-\\
-= f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n + \frac{1}{n!}\int_a^x{f^{(n + 1)}(t)(x - t)^ndt}$
+
+\begin{flalign*}
+f(x) - f(a) &= \int_a^x{f'(t)dt} = -\int_a^x{f'(t)d(x - t)} = -f'(t)(x - t)\Big|_a^x + \int_a^x{(x - t)f''(t)dt} =
+&&\\
+&=  f'(a)(x - a) - \int_a^x{f''(t)d\frac{(x - t)^2}{2}} =
+&&\\
+&= f'(a)(x - a) + f''(t)\frac{(x - t)^2}{2}\big|_a^x + \int_a^x{\frac{(x - t)^2}{2}df''(t)} =
+&&\\
+&= f'(a)(x - a) + f''(a)\frac{(x - a)^2}{2} + \int_a^x{\frac{(x - t)^2}{2}f''(t)dt} =
+&&\\
+&= f'(a)(x - a) + f''(a)\frac{(x - a)^2}{2} + f'''(a)\frac{(x - a)^3}{2 \cdot 3} + \int_a^x{f'''(t)\frac{(x - t)^3}{2 \cdot 3}dt} =
+&&\\
+&= f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n + \frac{1}{n!}\int_a^x{f^{(n + 1)}(t)(x - t)^ndt}
+&&
+\end{flalign*}
 \qed
 
 \textbf{3. Доказать признак сравнения для несобственных интегралов в предельной форме.\\}
@@ -92,6 +98,9 @@ $\frac{1}{2} g(x) < f(x) < \frac{3}{2} g(x)$\\
 Если $I_2$ расходится, то $\int_\delta^b \frac{1}{2} g(x)dx$ расходится $\Rightarrow$ $\int_\delta^b f(x)dx$ расходится $\Rightarrow$ $\int_a^b f(x)dx$ расходится.\qed
 
 \textbf{4. Доказать интегральный признак сходимости числового ряда.\\}
+\proof
+Дана функция $f$ 
+\qed
 
 \textbf{5. Доказать признак д’Аламбера в предельной форме.\\}
 Пусть $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = q$. Тогда:\\
