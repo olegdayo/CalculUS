@@ -3,10 +3,20 @@
 \usepackage[russian]{babel}
 \usepackage[OT1]{fontenc}
 \usepackage{amsmath}
+\usepackage{hyperref}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
 
 \newcommand{\proof}{$\square$ }
 \newcommand{\qed}{\hfill$\blacksquare$}
@@ -19,7 +29,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\textsf{by ОлегUS and ИванUS}}
+\fancyhead[C]{\textsf{ by \href{https://vk.com/ivan.dedov}{IvanUS} and \href{https://vk.com/olegsama}{OlegUS} }}
 
 \begin{document}
 
@@ -58,6 +68,19 @@ $\Phi(b) = \int_a^b f(t)dt + C$\\
 $\Phi(b) - \Phi(a) = \int_a^b f(t)dt + C - C = \int_a^b f(t)dt$. \qed
 
 \textbf{2. Вывести формулу Тейлора с остаточным членом в интегральной форме.\\}
+\proof
+$f(x)=f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \dots + \frac{f^{(n)}(a)}{n!} + \frac{1}{n!}\int_a^x{f^{(n+1)}(t)(x-t)^ndt}$
+\\
+По формуле Ньютона-Лейбница, интегрируя по частям $n$ раз, получим:
+\\
+$f(x) - f(a) = \int_a^x{f'(t)dt} = -\int_a^x{f'(t)d(x - t)} = -f'(t)(x - t)\Big|_a^x + \int_a^x{(x - t)f''(t)dt} = f'(a)(x - a) -
+\\
+- \int_a^x{f''(t)d\frac{(x - t)^2}{2}} = f'(a)(x - a) + f''(t)\frac{(x - t)^2}{2}\big|_a^x + \int_a^x{\frac{(x - t)^2}{2}df''(t)} = f'(a)(x - a) + f''(a)\frac{(x - a)^2}{2} +
+\\
++ \int_a^x{\frac{(x - t)^2}{2}f''(t)dt} = f'(a)(x - a) + f''(a)\frac{(x - a)^2}{2} + f'''(a)\frac{(x - a)^3}{2 \cdot 3} + \int_a^x{f'''(t)\frac{(x - t)^3}{2 \cdot 3}dt} =
+\\
+= f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n + \frac{1}{n!}\int_a^x{f^{(n + 1)}(t)(x - t)^ndt}$
+\qed
 
 \textbf{3. Доказать признак сравнения для несобственных интегралов в предельной форме.\\}
 Пусть $x \in [a, b)$, $f(x) > 0$, $g(x) > 0$. Тогда если $f(x) \sim g(x)$ при $x \rightarrow b$, то $I_1 = \int_a^b f(x)dx$ и $I_2 = \int_a^b g(x)dx$ сходятся или расходятся одновременно.\\
