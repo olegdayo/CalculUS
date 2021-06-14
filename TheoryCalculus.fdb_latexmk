@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1623688999 "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.pdf" "TheoryCalculus" 1623689014
+["pdflatex"] 1623688999 "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.pdf" "TheoryCalculus" 1623689172
   "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.aux" 1623689000 786 e276c1d9d9b034b2c246282950a5f4b4 ""
-  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" 1623689013 10453 7c95e19a3d3685e303cd95522f0aaee0 ""
+  "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.tex" 1623689162 10453 7c95e19a3d3685e303cd95522f0aaee0 ""
   "/Users/olegsidorenkov/Library/texlive/2021/texmf-var/fonts/tfm/lh/lh-t2a/labx1095.tfm" 1621796476 3336 216c27338cb0f11f0d2908d69ce3de23 ""
   "/Users/olegsidorenkov/Library/texlive/2021/texmf-var/fonts/tfm/lh/lh-t2a/larm0600.tfm" 1621796487 3248 7c0b9d76a2cd84ed06764a4c6eea5de4 ""
   "/Users/olegsidorenkov/Library/texlive/2021/texmf-var/fonts/tfm/lh/lh-t2a/larm0800.tfm" 1621796482 3240 04766e423166ba63b7fbbf132b8618cb ""
@@ -123,11 +123,11 @@
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "TheoryCalculus.aux" 1623689000 786 e276c1d9d9b034b2c246282950a5f4b4 "pdflatex"
   "TheoryCalculus.out" 1623689000 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "TheoryCalculus.tex" 1623689013 10453 7c95e19a3d3685e303cd95522f0aaee0 ""
+  "TheoryCalculus.tex" 1623689162 10453 7c95e19a3d3685e303cd95522f0aaee0 ""
   (generated)
   "TheoryCalculus.out"
   "TheoryCalculus.pdf"
+  "TheoryCalculus.log"
   "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.log"
   "TheoryCalculus.aux"
-  "TheoryCalculus.log"
   "/Users/olegsidorenkov/Desktop/Calculus/CalculUS/TheoryCalculus.pdf"
