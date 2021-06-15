@@ -22,6 +22,7 @@
 \newcommand{\proof}{$\square$ }
 \newcommand{\qed}{\hfill$\blacksquare$}
 \newcommand{\pd}{\partialderivative}
+\newcommand{\p}{\partial}
 
 \newcommand{\R}{\mathbb{R}}
 
@@ -260,14 +261,28 @@ $\begin{cases}
 \\
 Если $M(x^*, y^*, z^*)$ - точка локального условного экстремума, $f_1, g_1, g_2$ имеют непрерывные частные производные 1 порядка в окрестности точки $M$ и $\underbrace{\nabla}_{\text{градиент}} g_1(M), \nabla g_2(M)$ - л. н. з.
 \\
-Утверждение: $\exists \lambda_1, \lambda_2: \nabla f(M) + \lambda_1$
+Утверждение: $\exists \lambda_1, \lambda_2: \nabla f(M) + \lambda_1 \nabla g_1(M) + \lambda_2 \nabla g_2(M) = 0$
 \\
+\proof Пусть 
 $\begin{vmatrix}
-    \frac{\pd y_1}{\pd y}&\frac{\pd y_1}{\pd z}
+    \frac{\p y_1}{\p y}&\frac{\p y_1}{\p z}
     \\
     \\
-    \frac{\pd y_2}{\pd y}&\frac{\pd y_2}{\pd z}
-\end{vmatrix}$
+    \frac{\p y_2}{\p y}&\frac{\p y_2}{\p z}
+\end{vmatrix}
+\neq 0$, по теореме о неявной функции: $y = y(x); z = z(x)$ в окрестности точки $M$:
+$f(x, y(x), z(x))$ и $x$ - локальные экстремумы $\phi'(x^*) = 0$
+\\
+В окрестности точки $M$
+$\begin{cases}
+    g_1(x, y(x), z(x)) = 0
+    \\
+    g_2(x, y(x), z(x)) = 0
+\end{cases}$
+\\
+Рассмотрим в точке $M \frac{\p f}{\p x}$
+\\
+\qed
 
 \textbf{11. Доказать теорему о достаточном условии экстремума.\\}
 
