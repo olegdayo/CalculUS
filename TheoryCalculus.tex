@@ -280,10 +280,51 @@ $\begin{cases}
     g_2(x, y(x), z(x)) = 0
 \end{cases}$
 \\
-Рассмотрим в точке $M \frac{\p f}{\p x}$
+Рассмотрим в точке
+$M:
+\begin{cases}
+    \frac{\p f}{\p x} + \frac{\p f}{\p y} \cdot y' + \frac{\p f}{\p z} \cdot z' = 0
+    \\
+    \frac{\p g_1}{\p x} + \frac{\p g_1}{\p y} \cdot y' + \frac{\p g_1}{\p z} \cdot z' = 0| \cdot \lambda_1
+    \\
+    \frac{\p g_2}{\p x} + \frac{\p g_2}{\p y} \cdot y' + \frac{\p g_2}{\p z} \cdot z' = 0| \cdot \lambda_2
+\end{cases}$
 \\
+$\left(\frac{\p f}{\p x} + \lambda_1\frac{\p g_1}{\p x} + \lambda_2\frac{\p g_2}{\p x}\right) + y'\left(\frac{\p f}{\p y} + \lambda_1\frac{\p g_1}{\p y} + \lambda_2\frac{\p g_2}{\p y}\right) + z'\left(\frac{\p f}{\p z} + \lambda_1\frac{\p g_1}{\p z} + \lambda_2\frac{\p g_2}{\p z}\right) = 0$
+\\
+Пусть $\lambda_1, \lambda_2$ - решения:
+$\begin{cases}
+    \frac{\p f}{\p y} + \lambda_1\frac{\p g_1}{\p y} + \lambda_2\frac{\p g_2}{\p y} = 0
+    \\
+    \frac{\p f}{\p z} + \lambda_1\frac{\p g_1}{\p z} + \lambda_2\frac{\p g_2}{\p z} = 0
+\end{cases}
+\Rightarrow
+\text{в точке} \ M: \frac{\p f}{\p x} + \lambda_1\frac{\p g_1}{\p x} + \lambda_2\frac{\p g_2}{\p x} = 0$
+\\
+\\
+$\nabla f(M) + \lambda_1 \nabla g_1(M) + \lambda_2 g_2(M) = \bar{0}$
 \qed
 
 \textbf{11. Доказать теорему о достаточном условии экстремума.\\}
+Пусть функция $f(x, y)$ имеет непрерывные частные производные первого и второго порядков в $O_h (x_0, y_0)$, и притом\\
+1) $\frac{\p f}{\p x} (x_0, y_0) = \frac{\p f}{\p y} (x_0, y_0) = 0$,\\
+2) $A dx^2 + 2B dx dy + C dy^2 > 0 \quad (dx^2 + dy^2 \neq 0)$,\\
+где $A = \frac{\p^2 f}{\p x^2} (x_0, y_0)$, $B = \frac{\p^2 f}{\p y \p x} (x_0, y_0)$, $C = \frac{\p ^2 f}{\p y^2} (x0, y0)$.\\
+Тогда точка $(x_0, y_0)$ — точка локального минимума.\\
+\proof
+\begin{flalign*}
+\Delta f & = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0) &&\\
+& = \underbrace{\frac{\p f}{\p d} (x_0, y_0) dx + \frac{\p f}{\p y} (x_0, y_0) dy}_{0} + \frac{1}{2} \left( f_{xx}'' dx^2 + 2 f_{yx}'' dx dy + f_{yy}'' dy^2 \right) &&
+\end{flalign*}
+Произведем замены $x = x_0 + \theta dx, y = y_0 + \theta dy, \theta \in (0, 1), dx = r \cos \varphi, dy = r \sin \varphi$
+\begin{flalign*}
+& = \frac{r^2}{2} \left( f_{xx}'' \cos^2 \varphi + 2 f_{xy}'' \cos \varphi \sin \varphi + f_{yy}'' \sin^2 \varphi \right)_{x = x_0 + \theta dx, \quad y = y_0 + \theta dy} &&\\
+& = \frac{r^2}{2} \left( A \cos^2 \varphi + 2B \cos \varphi \sin \varphi + C \sin^2 \varphi + \varepsilon (dx, dy) \right),
+\end{flalign*}
+где $\left| \varepsilon (dx, dy) \right| \xrightarrow[dx \to 0, \quad dy \to 0]{}, \quad 0 \leq \varphi < 2\pi$\\
+$m = \min_{\varphi} \left( A \cos^2 \varphi + 2B \cos \varphi \sin \varphi + C \sin^2 \varphi \right) > 0$\\
+$\Delta f > \left( m + \varepsilon (dx, dy) \right) \exists \delta > 0 : \forall dx, dy: \sqrt{dx^2 + dy^2} < \delta \Rightarrow |\varepsilon (dx, dy)| < m \Rightarrow $ в $O_{\delta} (x_0, y_0) : \Delta f > 0, (dx, dy) \neq (0, 0)$
+\qed
+
 
 \end{document}
