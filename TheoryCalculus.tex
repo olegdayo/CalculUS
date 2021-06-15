@@ -8,6 +8,7 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[italicdiff]{physics}
 
 \hypersetup{
     colorlinks=true,
@@ -20,6 +21,7 @@
 
 \newcommand{\proof}{$\square$ }
 \newcommand{\qed}{\hfill$\blacksquare$}
+\newcommand{\pd}{\partialderivative}
 
 \newcommand{\R}{\mathbb{R}}
 
@@ -248,6 +250,24 @@ $\forall x: |x| > |x_2|$
 \end{flalign*}
 
 \textbf{10. Доказать теорему о необходимом условии условного экстремума.\\}
+$\begin{cases}
+    f(x, y, z) \rightarrow extr
+    \\
+    g_1(x, y, z) = 0
+    \\
+    g_2(x, y, z) = 0
+\end{cases}$
+\\
+Если $M(x^*, y^*, z^*)$ - точка локального условного экстремума, $f_1, g_1, g_2$ имеют непрерывные частные производные 1 порядка в окрестности точки $M$ и $\underbrace{\nabla}_{\text{градиент}} g_1(M), \nabla g_2(M)$ - л. н. з.
+\\
+Утверждение: $\exists \lambda_1, \lambda_2: \nabla f(M) + \lambda_1$
+\\
+$\begin{vmatrix}
+    \frac{\pd y_1}{\pd y}&\frac{\pd y_1}{\pd z}
+    \\
+    \\
+    \frac{\pd y_2}{\pd y}&\frac{\pd y_2}{\pd z}
+\end{vmatrix}$
 
 \textbf{11. Доказать теорему о достаточном условии экстремума.\\}
 
